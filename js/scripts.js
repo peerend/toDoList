@@ -2,11 +2,11 @@ $(document).ready(function(){
   $("form#new-to-do").submit(function(event){
     event.preventDefault();
 
-    var inputtedItem = $("input#to-do").val();
-    var newList = {list: inputtedItem};
-    //newList.tasks.push(newTask);
+    var listName = $("input#to-do").val();
+    var newList = {name: listName, tasks: []};
 
-    $('ul#tasks').append("<li><span class='task'>" + newList.list + " " + "</span></li>");
+
+    $('ul#lists').append("<li><span class='list'>" + newList.name + " " + "</span></li>");
     $("input#to-do").val('');
 
     // $(".task").click(function(){
